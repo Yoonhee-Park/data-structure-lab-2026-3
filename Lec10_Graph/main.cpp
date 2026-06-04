@@ -1,0 +1,65 @@
+#include <iostream>
+#include <stack>
+#include "Location2D.h"
+
+using namespace std;
+
+#define MAZE_SIZE 6
+
+char map[MAZE_SIZE][MAZE_SIZE] = {
+	{'1','1','1','1','1','1'},
+	{'e','0','1','0','0','1'},
+	{'1','0','0','0','1','1'},
+	{'1','0','1','0','1','1'},
+	{'1','0','1','0','0','x'},
+	{'1','0','1','1','1','1'}
+};
+
+bool isValidLoc(int r, int c)
+{
+	if (r < 0 || c < 0 || r >= MAZE_SIZE || c >= MAZE_SIZE)
+		return false;
+
+	return map[r][c] == '0' || map[r][c] == 'x';
+}
+
+int main()
+{
+	stack<Location2D> locStack;
+
+	locStack.push(Location2D(1, 0));
+
+	while (!locStack.empty()) {
+
+		Location2D here = locStack.top();
+		locStack.pop();
+
+		int r = here.row;
+		int c = here.col;
+
+		cout << "(" << r << "," << c << ") ";
+
+		if (map[r][c] == 'x') {
+			cout << "\n미로 탐색 성공\n";
+			return 0;
+		}
+
+		map[r][c] = '.';
+
+		if (isValidLoc(r - 1, c))
+			locStack.push(Location2D(r - 1, c));
+
+		if (isValidLoc(r + 1, c))
+			locStack.push(Location2D(r + 1, c));
+
+		if (isValidLoc(r, c - 1))
+			locStack.push(Location2D(r, c - 1));
+
+		if (isValidLoc(r, c + 1))
+			locStack.push(Location2D(r, c + 1));
+	}
+
+	cout << "미로 탐색 실패\n";
+
+	return 0;
+}
