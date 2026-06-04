@@ -1,2 +1,0 @@
-C:\Users\USER\Desktop\MST\x64\Debug\MST.exe
-C:\Users\USER\Desktop\Lec11_MST\x64\Debug\MST.exe
