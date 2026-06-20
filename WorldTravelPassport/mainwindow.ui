@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>693</width>
+    <height>1017</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>20</y>
+      <width>201</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>✈️ World Travel Passport ✈️</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnSeoul">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>140</y>
+      <width>71</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius:15px;
+background-color:red;
+color:white;
+font-size:16px;
+font-weight:bold;</string>
+    </property>
+    <property name="text">
+     <string>●Seoul</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnSingapore">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>220</y>
+      <width>101</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius:15px;
+background-color:green;
+color:white;
+font-size:16px;
+font-weight:bold;</string>
+    </property>
+    <property name="text">
+     <string>●Singapore</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnSydney">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>300</y>
+      <width>81</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius:15px;
+background-color:blue;
+color:white;
+font-size:16px;
+font-weight:bold;</string>
+    </property>
+    <property name="text">
+     <string>●Sydney</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnDubai">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>160</y>
+      <width>81</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius:15px;
+background-color:yellow;
+color:black;
+font-size:16px;
+font-weight:bold;</string>
+    </property>
+    <property name="text">
+     <string>●Dubai</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="listFlight">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>430</y>
+      <width>301</width>
+      <height>261</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>400</y>
+      <width>111</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>🛫 항공편 목록</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelVisited">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>520</y>
+      <width>131</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>🌎 방문 도시 : 0개</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelCount">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>550</y>
+      <width>131</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>🎟️ 누적 예매 : 0회</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelLevel">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>580</y>
+      <width>171</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>🏅 여행 등급 : Beginner</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnReserve">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>710</y>
+      <width>91</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>예매하기</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelStatus">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>750</y>
+      <width>91</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>상태 : 대기중</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelMap">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>60</y>
+      <width>631</width>
+      <height>321</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>400</width>
+      <height>300</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="resources.qrc">:/Images/worldmap.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <zorder>labelMap</zorder>
+   <zorder>label</zorder>
+   <zorder>listFlight</zorder>
+   <zorder>label_4</zorder>
+   <zorder>labelVisited</zorder>
+   <zorder>labelCount</zorder>
+   <zorder>labelLevel</zorder>
+   <zorder>btnReserve</zorder>
+   <zorder>labelStatus</zorder>
+   <zorder>btnDubai</zorder>
+   <zorder>btnSeoul</zorder>
+   <zorder>btnSingapore</zorder>
+   <zorder>btnSydney</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>693</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
